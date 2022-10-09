@@ -1,5 +1,5 @@
 import string
-# Encode: 1. put a word 2. choose between encode and decode 3. Shift number 4. Translate
+
 
 while True:
     def encode():
