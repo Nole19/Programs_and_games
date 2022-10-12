@@ -41,16 +41,14 @@ while decision == "y":
             print("Computer won :(")
     your_cards = []
     computer_cards = []
-    add_card_to_you()
-    add_card_to_you()
-    add_comp_card()
+    for i in range(2):
+        add_card_to_you()
+        add_comp_card()
     while sum(computer_cards) < 17:
         add_comp_card()
-        print(computer_cards)
         if 11 in computer_cards and sum(computer_cards) > 21:
             computer_cards.remove(11)
             computer_cards.append(1)
-    print(computer_cards)
     print(f"Computer's first card is {computer_cards[0]}")
     print(f"Your cards: {your_cards}, current score: {sum(your_cards)}")
     add_or_not = input("Do you want to take one more card? Type 'y' or 'n': ")
